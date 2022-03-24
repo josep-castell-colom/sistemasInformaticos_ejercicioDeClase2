@@ -217,21 +217,23 @@ dir ../historia
 ```powershell
 copy ../historia/datos1/tycho.txt .
 
-copy ../history/datos2/kepler.txt .
+copy ../historia/datos2/kepler.txt .
 ```
 
 ### 7. Cambia de lugar los archivos almacenados en DATOS1 y DATOS2 de forma que TYCHO.TXT quede guardado dentro DATOS2 y KEPLER.TXT en DATOS1
 
 ```powershell
-move ../history/datos1/tycho.txt ../history/datos2/tycho.txt
+move ../historia/datos1/tycho.txt ../historia/datos2/tycho.txt
 
-move ../history/datos2/kepler.txt ../history/datos1/kepler.txt
+move ../historia/datos2/kepler.txt ../historia/datos1/kepler.txt
 ```
 
 ### 8. Crea un nuevo archivo formado por la unión de los dos anteriores (sin volver a escribir el texto) y guárdalo dentro de la carpeta HISTORIA con el nombre TOTAL.TXT
 
 ```powershell
+cat ../historia/datos2/tycho.txt >> ../historia/total.txt
 
+cat ../historia/datos1/kepler.txt >> ../historia/total.txt
 ```
 
 ### 9. Abre el archivo KEPLER.TXT almacenado en la carpeta CIENCIA y añade el siguiente texto
@@ -243,7 +245,7 @@ move ../history/datos2/kepler.txt ../history/datos1/kepler.txt
 ### 10. Cambia el nombre del archivo anterior por el de GALILEO.TXT
 
 ```powershell
-ren ../history/datos1/kepler.txt ../history/datos1/galileo.txt
+ren ../historia/datos1/kepler.txt ../historia/datos1/galileo.txt
 ```
 
 ## EJERCICIO 4
@@ -253,25 +255,31 @@ ren ../history/datos1/kepler.txt ../history/datos1/galileo.txt
 ### 1. Crea en la carpeta raíz de la unidad A: una carpeta denominada TECINFO
 
 ```powershell
----
+md A:\tecinfo
 ```
 
 ### 2. Crea dentro de TECINFO el siguiente archivo de texto y llámalo HARD.TXT
 
 ```powershell
----
+echo 'El HARDWARE está constituido por los elementos físicos del ordenador.
+Consta esencialmente de componentes electrónicos que proporcionan el
+soporte necesario para la interpretación y ejecución de las operaciones
+elementales que realiza el ordenador' >> A:\hard.txt
 ```
 
 ### 3. Crea dentro de TECINFO el siguiente archivo de texto y llámalo SOFT.TXT
 
 ```powershell
----
+echo 'El SOFTWARE es el conjunto de elementos lógicos necesarios para que el
+ordenador realice las funciones que se le encomiendan. Está formado por
+los programas, es decir, por un conjunto ordenado de instrucciones,
+comprensibles por la máquina, que permiten desarrollar tareas concretas' >> A:\soft.txt
 ```
 
 ### 4. Mueve el contenido de TECINFO a la carpeta APLI del disquete A utilizado para realizar los ejercicios anteriores
 
 ```powershell
----
+move A:\tecinfo/*.txt D:\apli
 ```
 
 ### 5. Crea un nuevo archivo formado por la unión de HARD.TXT y SOFT.TXT, sin volver a escribir el texto, y guárdalo en la carpeta AGENDA con el nombre ORDER.TXT
