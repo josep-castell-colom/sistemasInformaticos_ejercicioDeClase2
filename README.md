@@ -197,7 +197,7 @@ md astro1,astro2
 ### 3. Sitúate en la carpeta CIENCIA y desde allí muestra el listado de archivos y subcarpetas de la carpeta HISTORIA
 
 ```powershell
----
+dir ../historia
 ```
 
 ### 4. Utilizando el editor de MS-DOS crea el siguiente archivo de texto y guárdalo con el nombre TYCHO.TXT dentro de la carpeta DATOS1
@@ -215,19 +215,23 @@ md astro1,astro2
 ### 6. Copia los archivos TYCHO.TXT y KEPLER.TXT en la carpeta CIENCIA
 
 ```powershell
----
+copy ../historia/datos1/tycho.txt .
+
+copy ../history/datos2/kepler.txt .
 ```
 
 ### 7. Cambia de lugar los archivos almacenados en DATOS1 y DATOS2 de forma que TYCHO.TXT quede guardado dentro DATOS2 y KEPLER.TXT en DATOS1
 
 ```powershell
----
+move ../history/datos1/tycho.txt ../history/datos2/tycho.txt
+
+move ../history/datos2/kepler.txt ../history/datos1/kepler.txt
 ```
 
 ### 8. Crea un nuevo archivo formado por la unión de los dos anteriores (sin volver a escribir el texto) y guárdalo dentro de la carpeta HISTORIA con el nombre TOTAL.TXT
 
 ```powershell
----
+
 ```
 
 ### 9. Abre el archivo KEPLER.TXT almacenado en la carpeta CIENCIA y añade el siguiente texto
@@ -239,7 +243,7 @@ md astro1,astro2
 ### 10. Cambia el nombre del archivo anterior por el de GALILEO.TXT
 
 ```powershell
----
+ren ../history/datos1/kepler.txt ../history/datos1/galileo.txt
 ```
 
 ## EJERCICIO 4
