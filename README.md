@@ -285,13 +285,15 @@ move A:\tecinfo/*.txt D:\apli
 ### 5. Crea un nuevo archivo formado por la unión de HARD.TXT y SOFT.TXT, sin volver a escribir el texto, y guárdalo en la carpeta AGENDA con el nombre ORDER.TXT
 
 ```powershell
----
+cat D:\apli/hard.txt >> D:\varios/agenda/order.txt
+
+cat D:\apli/soft.txt >> D:\varios/agenda/order.txt
 ```
 
 ### 6. Elimina la carpeta TECINFO
 
 ```powershell
----
+rmdir A:\tecinfo
 ```
 
 ### 7. Copia a la vez los archivos HARD.TXT y SOFT.TXT en la carpeta VARIOS
